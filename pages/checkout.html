@@ -2,12 +2,14 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Tienda Urbana</title>
+    <title>Checkout | Tienda Urbana</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+
+    <!-- NAVBAR -->
     <header class="navbar">
         <div class="container nav-content">
 
@@ -24,52 +26,28 @@
         </div>
     </header>
 
-    <h1>Tienda Urbana</h1>
+    <!-- CONTENIDO -->
+    <main class="checkout-section">
+        <div class="container">
 
-    <!-- Botón para pagar -->
-    <button id="mp-pay-button">Pagar con Mercado Pago</button>
+            <h1 class="checkout-title">Finalizar compra</h1>
 
-    <!-- SDK de Mercado Pago -->
+            <!-- Contenedor donde Mercado Pago renderiza el botón -->
+            <div id="wallet_container"></div>
+
+        </div>
+    </main>
+
+    <!-- SDK Mercado Pago -->
     <script src="https://sdk.mercadopago.com/js/v2"></script>
 
-    <script>
-        // 1. Poné tu Public Key de Mercado Pago (modo prueba para empezar)
-        const publicKey = "TU_PUBLIC_KEY_AQUI";
+    <!-- Contador carrito -->
+    <script src="../js/java.js"></script>
 
-        // 2. Inicializá Mercado Pago con tu Public Key
-        const mp = new MercadoPago(publicKey, {
-            locale: 'es-AR'
-        });
+    <!-- Lógica de checkout -->
+    <script src="../backend/checkout.js"></script>
 
-        // 3. Llamá al backend para obtener el preferenceId
-        async function obtenerPreferenceId() {
-            const response = await fetch("/crear_preferencia", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                // Podés enviar los items del carrito como JSON
-                body: JSON.stringify({ items: [{ title: "Remera Negra", quantity: 1, unit_price: 10000 }] })
-            });
-
-            const data = await response.json();
-            return data.preferenceId;
-        }
-
-        // 4. Configurá el botón de pago con la preferenceId
-        document.getElementById("mp-pay-button").addEventListener("click", async () => {
-            const preferenceId = await obtenerPreferenceId();
-
-            mp.bricks().create("wallet", "mp-pay-button", {
-                initialization: {
-                    preferenceId: preferenceId
-                },
-                callbacks: {
-                    onError: (error) => console.error(error)
-                }
-            });
-        });
-    </script>
+    <script> src="../backend/server.js" </script>
 
 </body>
 </html>
