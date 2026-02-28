@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   const data = await response.json();
 
-  const mp = new MercadoPago("APP_USR-a823591d-cb95-4fb3-8e99-2967af8a2eb0");
+  const mp = new MercadoPago("TEST-XXXXXXXXXXXXXXXX");
 
   const bricksBuilder = mp.bricks();
 

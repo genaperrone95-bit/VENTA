@@ -8,7 +8,7 @@ app.use(express.json());
 
 // 🔑 Reemplazá con tu Access Token REAL
 const client = new MercadoPagoConfig({
-  accessToken: "APP_USR-512281667211762-022813-cf0bcb8d799d9f7df2e5c1b3b30ed8a0-3233058276"
+  accessToken: "TEST-XXXXXXXXXXXXXXXX",
 });
 
 app.post("/crear_preferencia", async (req, res) => {
