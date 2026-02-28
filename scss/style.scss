@@ -1,0 +1,18 @@
+/* ======================
+   VARIABLES
+====================== */
+@use "variables";
+
+/* ======================
+   BASE
+====================== */
+@use "base/body";
+@use "base/utilities";
+
+/* ======================
+   COMPONENTS
+====================== */
+@use "assets/header";
+@use "assets/products";
+@use "assets/buttons";
+@use "assets/carrito";

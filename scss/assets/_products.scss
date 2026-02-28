@@ -1,0 +1,48 @@
+@use "../variables" as v;
+
+/* =========================
+   PRODUCTS
+========================= */
+
+
+.products-section {
+  padding: 60px 0;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.product-card {
+  background: white;
+  border-radius: v.$radius;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  transition: 0.3s;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+  }
+
+  .product-info {
+    padding: 20px;
+    text-align: center;
+
+    h3 {
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+  }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tienda Urbana</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="container nav-content">
+
+        <a href="../index.html" class="logo">Tienda Urbana</a>
+
+        <nav class="nav-links">
+            <a href="./index.html">Inicio</a>
+            <a href="./pages/cart.html">
+                🛒 Carrito 
+                <span id="cart-count" class="cart-count">0</span>
+            </a>
+        </nav>
+
+    </div>
+</header>
+
+<main class="products-section">
+    <div class="container">
+
+        <h2 class="section-title">Nuestros Productos</h2>
+
+        <div class="products-grid">
+
+            <article class="product-card" data-name="Remera Negra" data-price="10000">
+                <img src="https://via.placeholder.com/300x350" alt="Remera Negra">
+                <div class="product-info">
+                    <h3>Remera Negra</h3>
+                    <p class="price">$10.000</p>
+                    <button class="btn-primary add-to-cart">Agregar al carrito</button>
+                </div>
+            </article>
+
+            <article class="product-card" data-name="Buzo Blanco" data-price="18000">
+                <img src="https://via.placeholder.com/300x350" alt="Buzo Blanco">
+                <div class="product-info">
+                    <h3>Buzo Blanco</h3>
+                    <p class="price">$18.000</p>
+                    <button class="btn-primary add-to-cart">Agregar al carrito</button>
+                </div>
+            </article>
+
+            <article class="product-card" data-name="Campera Denim" data-price="25000">
+                <img src="https://via.placeholder.com/300x350" alt="Campera Denim">
+                <div class="product-info">
+                    <h3>Campera Denim</h3>
+                    <p class="price">$25.000</p>
+                    <button class="btn-primary add-to-cart">Agregar al carrito</button>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</main>
+
+<!-- JS externo -->
+<script src="../js/java.js"></script>
+<script src="../js/cart.js"></script>
+</body>
+</html>

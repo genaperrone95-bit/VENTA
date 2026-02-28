@@ -1,0 +1,17 @@
+@use "../variables" as v;
+
+/* =========================
+   UTILITIES
+========================= */
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}

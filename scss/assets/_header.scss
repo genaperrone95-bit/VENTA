@@ -1,0 +1,83 @@
+@use "../variables" as v;
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  background-color: v.$primary-color;
+  padding: 20px 0;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  .cart-button {
+    background-color: v.$accent-color;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    .cart-count {
+      background: white;
+      padding: 3px 8px;
+      border-radius: 50%;
+      margin-left: 5px;
+    }
+  }
+}
+
+.navbar {
+    background: black;
+    padding: 15px 0;
+    color: white;
+}
+
+.nav-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.cart-count {
+    background: red;
+    padding: 3px 8px;
+    border-radius: 50%;
+    font-size: 12px;
+    margin-left: 5px;
+}

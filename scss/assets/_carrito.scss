@@ -1,0 +1,132 @@
+@use "../variables" as v;
+/* =========================
+   CARRITO
+========================= */
+
+.cart-grid {
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-info h3 {
+    margin: 0;
+}
+
+.cart-quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-quantity button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+.cart-summary {
+    max-width: 900px;
+    margin: 20px auto;
+    text-align: right;
+}
+
+.cart-title {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.cart-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.cart-items {
+    background: white;
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-quantity button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.cart-summary {
+    background: #f8f8f8;
+    padding: 30px;
+    border-radius: 10px;
+    height: fit-content;
+    position: sticky;
+    top: 100px;
+}
+
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.summary-line.total {
+    font-weight: bold;
+    font-size: 18px;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.checkout-btn:hover {
+    opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cart-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .cart-summary {
+        position: static;
+    }
+}

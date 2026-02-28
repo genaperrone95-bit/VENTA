@@ -1,0 +1,20 @@
+@use "../variables" as v;
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn-primary {
+  background-color: v.$primary-color;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: darken(v.$primary-color, 10%);
+  }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Carrito</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container nav-content">
+
+            <a href="../index.html" class="logo">Tienda Urbana</a>
+
+            <nav class="nav-links">
+                <a href="../index.html">Inicio</a>
+                <a href="./pages/cart.html">
+                    🛒 Carrito 
+                    <span id="cart-count" class="cart-count">0</span>
+                </a>
+            </nav>
+
+        </div>
+    </header>
+    <h1 class="cart-title">Tu carrito</h1>
+
+    <div class="cart-layout">
+
+        <!-- LISTA DE PRODUCTOS -->
+        <div id="cart-container" class="cart-items"></div>
+
+        <!-- RESUMEN LATERAL -->
+        <div class="cart-summary">
+
+            <h2>Resumen</h2>
+
+            <div class="summary-line">
+                <span>Subtotal</span>
+                <span>$<span id="cart-subtotal">0</span></span>
+            </div>
+
+            <div class="summary-line total">
+                <span>Total</span>
+                <span>$<span id="cart-total">0</span></span>
+            </div>
+
+            <button class="checkout-btn"
+                onclick="window.location.href='checkout.html'">
+                Finalizar compra
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="../js/java.js"></script>
+    <script src="../js/cart.js"></script>
+
+</body>
+</html>
