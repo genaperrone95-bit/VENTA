@@ -27,6 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
             div.classList.add("cart-item");
 
             div.innerHTML = `
+                <img src="${producto.imagen}" class="cart-img">
+
                 <div class="cart-info">
                     <h3>${producto.nombre}</h3>
                     <p>$${producto.precio}</p>

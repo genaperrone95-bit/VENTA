@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const nombre = producto.dataset.name;
             const precio = parseInt(producto.dataset.price);
+            const imagen = producto.dataset.image; // 👈 ahora toma la imagen
 
             let carrito = obtenerCarrito();
 
@@ -38,14 +39,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 carrito.push({
                     nombre,
                     precio,
+                    imagen, // 👈 se guarda en el carrito
                     cantidad: 1
                 });
             }
 
             guardarCarrito(carrito);
             actualizarContador();
+
         });
+
     });
 
+    // Actualiza el contador al cargar la página
     actualizarContador();
+
 });
